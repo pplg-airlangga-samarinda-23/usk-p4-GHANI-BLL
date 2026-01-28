@@ -1,0 +1,116 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .nav-menu li a:hover {
+            color: #667eea;
+            background-color: #f0f0f0;
+        }
+        .logout-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.logout-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.logout-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #111;
+    color: white;
+    padding-top: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* Menu link */
+.sidebar a {
+    display: block;
+    color: #bbb;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+/* Hover */
+.sidebar a:hover {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+/* Menu aktif (halaman sekarang) */
+
+.main-content {
+    margin-left: 220px;
+    padding: 30px;
+    background-color: #f4f6f9;
+    min-height: 100vh;
+}
