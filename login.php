@@ -27,6 +27,9 @@
         <div class="daftar">
             Belum punya akun? <a href="register.php">Daftar</a>
         </div>
+        <div class="btn-kembali">
+            <a href="index.php">➤ Kembali</a>
+        </div>
     </form>
 
 </body>

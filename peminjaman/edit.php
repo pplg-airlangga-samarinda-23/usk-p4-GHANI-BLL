@@ -80,6 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </option>
                 <?php endforeach; ?>
             </select>
+            <br>
 
             <label for="id_user">Peminjam</label>
             <select name="id_user" id="id_user" required>
@@ -89,19 +90,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </option>
                 <?php endforeach; ?>
             </select>
-
+            <br>
             <label for="tgl_pinjam">Tanggal Pinjam</label>
             <input type="date" name="tgl_pinjam" id="tgl_pinjam" value="<?= $peminjaman['tgl_pinjam'] ?>" required>
-
+            <br>
             <label for="tgl_kembali">Tanggal Kembali</label>
             <input type="date" name="tgl_kembali" id="tgl_kembali" value="<?= $peminjaman['tgl_kembali'] ?>" required>
-
+            <br>
             <label for="status">Status</label>
             <select name="status" id="status" required>
                 <option value="Dipinjam" <?= $peminjaman['status'] == 'Dipinjam' ? 'selected' : '' ?>>Dipinjam</option>
                 <option value="Dikembalikan" <?= $peminjaman['status'] == 'Dikembalikan' ? 'selected' : '' ?>>Dikembalikan</option>
             </select>
-
+            <br>
             <button type="submit" class="btn-edit">Simpan Perubahan</button>
         </form>
     </div>
