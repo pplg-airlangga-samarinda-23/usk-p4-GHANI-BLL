@@ -6,14 +6,12 @@ $username = $_POST['username'] ?? '';
 $password = $_POST['password'] ?? '';
 $confirm  = $_POST['confirm_password'] ?? '';
 
-// Cek password sama atau tidak
 if ($password !== $confirm) {
     header("Location: register.php?pesan=beda");
     exit;
 }
 
-// Cek username sudah ada atau belum
-$stmt = mysqli_prepare($koneksi, "SELECT id FROM user WHERE username = ?");
+$stmt = mysqli_prepare($koneksi, "SELECT id FROM users WHERE username = ?");
 mysqli_stmt_bind_param($stmt, "s", $username);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
@@ -25,7 +23,7 @@ if (mysqli_fetch_assoc($result)) {
 
 $hash = password_hash($password, PASSWORD_DEFAULT);
 
-$stmt = mysqli_prepare($koneksi, "INSERT INTO user (username, password, role) VALUES (?, ?, 'siswa')");
+$stmt = mysqli_prepare($koneksi, "INSERT INTO users (username, password, role) VALUES (?, ?, 'siswa')");
 mysqli_stmt_bind_param($stmt, "ss", $username, $hash);
 
 

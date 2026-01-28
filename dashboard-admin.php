@@ -12,7 +12,7 @@ if (!isset($_SESSION['login']) || $_SESSION['role'] !== 'admin') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Anggota</title>
+    <title>Dashboard Admin</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -27,7 +27,7 @@ if (!isset($_SESSION['login']) || $_SESSION['role'] !== 'admin') {
     </div>
 </body>
 
-<div class="main-content">
+<div class="welcome">
     <h2>Selamat datang Admin, <?= htmlspecialchars($_SESSION['username']) ?> 👋</h2>
     <p>Ini adalah halaman dashboard admin.</p>
 </div>

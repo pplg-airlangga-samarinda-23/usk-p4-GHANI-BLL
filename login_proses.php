@@ -5,7 +5,7 @@ include 'koneksi.php';
 $username = $_POST['username'] ?? '';
 $password = $_POST['password'] ?? '';
 
-$stmt = mysqli_prepare($koneksi, "SELECT id, username, password, role FROM user WHERE username = ?");
+$stmt = mysqli_prepare($koneksi, "SELECT id, username, password, role FROM users WHERE username = ?");
 mysqli_stmt_bind_param($stmt, "s", $username);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
@@ -18,7 +18,6 @@ if ($user && password_verify($password, $user['password'])) {
     $_SESSION['username'] = $user['username'];
     $_SESSION['role'] = $user['role'];
 
-    // Arahkan berdasarkan role
     if ($user['role'] === 'admin') {
         header("Location: dashboard-admin.php");
     } else {

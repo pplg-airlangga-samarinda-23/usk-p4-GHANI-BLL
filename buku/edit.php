@@ -49,33 +49,44 @@ $stmt->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Buku</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-    <h1>Edit Data Buku</h1>
+    <div class="sidebar">
+        <div class="logo">Admin Panel</div>
+        <a href="../dashboard-admin.php" class="active">Dashboard</a>
+        <a href="index.php" class="active">Data Buku</a>
+        <a href="../anggota/index.php">Data Anggota</a>
+        <a href="../peminjaman/index.php">Data Peminjaman</a>
+        <a href="../logout.php" class="logout-btn">Logout</a>
+    </div>
+    <div class="data-main-content">
+        <h1>Edit Data Buku</h1>
 
-    <form method="POST" action="">
-        <table>
-            <tr>
-                <td><label for="judul">Judul:</label></td>
-                <td><input type="text" name="judul" id="judul" value="<?= htmlspecialchars($book['judul']) ?>" required></td>
-            </tr>
-            <tr>
-                <td><label for="pengarang">Pengarang:</label></td>
-                <td><input type="text" name="pengarang" id="pengarang" value="<?= htmlspecialchars($book['pengarang']) ?>" required></td>
-            </tr>
-            <tr>
-                <td><label for="stok">Stok:</label></td>
-                <td><input type="number" name="stok" id="stok" value="<?= $book['stok'] ?>" required></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <button type="submit">Update</button>
-                    <a href="index.php">Batal</a>
-                </td>
-            </tr>
-        </table>
-    </form>
+        <form method="POST" action="">
+            <table>
+                <tr>
+                    <td><label for="judul">Judul:</label></td>
+                    <td><input type="text" name="judul" id="judul" value="<?= htmlspecialchars($book['judul']) ?>" required></td>
+                </tr>
+                <tr>
+                    <td><label for="pengarang">Pengarang:</label></td>
+                    <td><input type="text" name="pengarang" id="pengarang" value="<?= htmlspecialchars($book['pengarang']) ?>" required></td>
+                </tr>
+                <tr>
+                    <td><label for="stok">Stok:</label></td>
+                    <td><input type="number" name="stok" id="stok" value="<?= $book['stok'] ?>" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">Update</button>
+                        <a href="index.php">Batal</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </body>
 
 </html>

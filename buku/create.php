@@ -30,27 +30,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nambah Buku</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-    <h1>Tambah Buku</h1>
-
-
-    <form action="create.php" method="post">
-        <div class="form-item">
-            <label for="judul">Judul</label>
-            <input type="text" name="judul" id="judul">
-        </div>
-        <div class="form-item">
-            <label for="pengarang">Pengarang</label>
-            <input type="text" name="pengarang" id="pengarang">
-        </div>
-        <div class="form-item">
-            <label for="stok">Stok</label>
-            <input type="number" name="stok" id="stok">
-        </div>
-        <button type="submit">Tambah</button>
-    </form>
+    <div class="sidebar">
+        <div class="logo">Admin Panel</div>
+        <a href="../dashboard-admin.php" class="active">Dashboard</a>
+        <a href="index.php" class="active">Data Buku</a>
+        <a href="../anggota/index.php">Data Anggota</a>
+        <a href="../peminjaman/index.php">Data Peminjaman</a>
+        <a href="../logout.php" class="logout-btn">Logout</a>
+    </div>
+    <div class="data-main-content">
+        <h1>Tambah Buku</h2>
+            <form action="create.php" method="post">
+                <table>
+                    <tr>
+                        <td>Judul</td>
+                        <td><input type="text" name="judul"></td>
+                    </tr>
+                    <tr>
+                        <td>Pengarang</td>
+                        <td><input type="text" name="pengarang"></td>
+                    </tr>
+                    <tr>
+                        <td>Stok</td>
+                        <td><input type="text" name="stok"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: right;">
+                            <button type="submit">Simpan</button>
+                            <a href="index.php">Batal</a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+    </div>
 </body>
 
 </html>

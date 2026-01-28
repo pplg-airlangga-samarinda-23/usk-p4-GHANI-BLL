@@ -1,10 +1,18 @@
+<?php
+include 'koneksi.php';
+
+$sql = "SELECT * FROM buku ORDER BY id DESC";
+$result = $koneksi->query($sql);
+$books = $result->fetch_all(MYSQLI_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USK - GHANIBLL</title>
+    <title>Katalog Buku - Perpustakaan Airlangga</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,6 +27,20 @@
         </div>
     </nav>
 
+    <div class="books-section">
+        <div class="book-container">
+            <?php foreach ($books as $book): ?>
+                <div class="book-card">
+                    <div class="book-title"><?= htmlspecialchars($book['judul']) ?></div>
+                    <div class="book-author"><?= htmlspecialchars($book['pengarang']) ?></div>
+                    <div class="book-stock <?= $book['stok'] > 0 ? 'available' : 'out' ?>">
+                        Stok: <?= htmlspecialchars($book['stok']) ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    </div>
 
 </body>
 
