@@ -43,9 +43,21 @@ Admin
   <img src="foto/siswa.png" width="300" />
 </p>
 
+## Cara Menggunakan
+
+1. Clone repository:
+
+```bash
+  git clone https://github.com/pplg-airlangga-samarinda-23/usk-p4-GHANI-BLL.git
+```
+
+2. Buka folder project di `File Manager`
+3. Jalankan usk-p4-GHANI-BLL menggunakan browser
+   atau gunakan Live Server di `VS Code`
+
 ## Akun Demo
 
-Username : magang
+Username : magang <br>
 Password : 123
 
 ## Struktur Folder
@@ -87,3 +99,10 @@ USK-P4-GHANIBLL/
 ├── register_proses.php   # Proses registrasi
 └── styles.css            # Styling global
 ```
+
+## Menggunakan Bahasa
+
+![PHP](https://img.shields.io/badge/PHP-Native-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-Frontend-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-Style-1572B6?style=for-the-badge&logo=css3&logoColor=white)
