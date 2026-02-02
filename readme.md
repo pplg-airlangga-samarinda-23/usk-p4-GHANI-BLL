@@ -1,17 +1,54 @@
-## Preview USK
+## Judul
 
-Sistem Manajemen Perpustakaan berbasis web untuk mengelola peminjaman dan pengembalian buku.
-
-<p align="center">
-  <img src="foto/admin.png" width="300" />
-  <img src="foto/siswa.png" width="300" />
-</p>
+Perpus-V1
 
 ## ୧⍤⃝Identitas
 
 - Nama : Ghani
 - Sekolah : SMK TI Airlangga
 - Jurusan : PPLG
+
+## Tujuan
+
+Sistem Manajemen Perpustakaan berbasis web ini dibuat untuk mengelola data buku, anggota, peminjaman dan pengembalian secara terstruktur dan mudah.
+
+## Deskripsi
+
+Aplikasi ini merupakan Sistem Manajemen Perpustakaan berbasis web yang dibuat untuk membantu sekolah dalam mengelola data buku dan data siswa (anggota perpustakaan) secara terstruktur dan efisien.
+
+Sistem ini memudahkan admin dalam mencatat koleksi buku, mengatur data anggota/siswa, serta mengelola proses peminjaman dan pengembalian buku sehingga semua data tersimpan rapi di dalam database dan lebih mudah dicari kembali.
+
+## Fitur Apa Saja ?
+
+```bash
+Anggota
+- Login & Registrasi
+- Dashboard Anggota
+- Melihat Daftar Buku
+- Mencari Buku
+- Meminjam & Mengembalikan Buku
+
+Admin
+- Login & Logout
+- Dashboard Admin
+- Manajemen Anggota (CRUD)
+- Manajemen Buku (CRUD)
+- Manajemen Peminjaman & Pengembalian
+```
+
+## Tampilan Dashboard
+
+<p align="center">
+  <img src="foto/admin.png" width="300" />
+  <img src="foto/siswa.png" width="300" />
+</p>
+
+## Akun Demo
+
+Username : magang
+Password : 123
+
+## Struktur Folder
 
 ```bash
 USK-P4-GHANIBLL/
